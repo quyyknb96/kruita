@@ -12,4 +12,5 @@ public interface ValueService {
 	Value save(Value value);
 	boolean update(Value value);
 	boolean delete(int id);
+	List<Value> getByDate(Date date);
 }

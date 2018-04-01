@@ -33,7 +33,7 @@ public class MeterController {
 	}
 
 	@RequestMapping(value = "/meter/{id}", method = RequestMethod.GET)
-	public ResponseEntity<?> listById(@PathVariable int id) {
+	public ResponseEntity<?> getById(@PathVariable int id) {
 		Meter list = meterService.getById(id);
 		if (list != null) {
 			return new ResponseEntity<Meter>(list, HttpStatus.OK);

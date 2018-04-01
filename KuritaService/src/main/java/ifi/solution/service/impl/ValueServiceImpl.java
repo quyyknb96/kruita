@@ -32,8 +32,7 @@ public class ValueServiceImpl implements ValueService {
 	@Override
 	public Value save(Value value) {
 		// TODO Auto-generated method stub
-		valueRepository.save(value);
-		return value;
+		return valueRepository.save(value);
 	}
 
 	@Override
@@ -55,6 +54,12 @@ public class ValueServiceImpl implements ValueService {
 		}else {
 			return false;	
 		}		
+	}
+
+	@Override
+	public List<Value> getByDate(Date date) {
+		// TODO Auto-generated method stub
+		return valueRepository.findByDate(date);
 	}
 	
 

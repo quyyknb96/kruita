@@ -13,5 +13,6 @@ import ifi.solution.model.Value;
 public interface ValueDAO extends JpaRepository<Value, Integer> {
 	Value findById(int id);
 	List<Value> findByMeter(Meter meter);
-	Value findByMeterAndDateGreaterThanDate(Meter meter , Long date);
+	List<Value> findByDate(Date date);
+//	Value findByMeterAndDateGreaterThanDate(Meter meter , Long date);
 }
